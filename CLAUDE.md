@@ -14,7 +14,7 @@ flutter build apk                # Build Android APK
 
 ### API URL configuration
 
-The backend URL defaults to `https://homescrapy.xyz`. Override via Dart environment variable for local dev:
+The backend URL defaults to `https://home.alecostantini.dev`. Override via Dart environment variable for local dev:
 
 ```bash
 # Emulator (Android AVD)
@@ -26,7 +26,7 @@ flutter run --dart-define=API_URL=http://192.168.1.X:8001
 
 ## Architecture
 
-Flutter app for browsing Milan cinema showtimes, backed by a custom scraper API at `homescrapy.xyz`.
+Flutter app for browsing Milan cinema showtimes, backed by a custom scraper API at `home.alecostantini.dev`.
 
 ### Layer overview
 

@@ -11,7 +11,7 @@ class ApiService {
   String get baseUrl {
     const apiUrl = String.fromEnvironment(
       'API_URL',
-      defaultValue: 'https://homescrapy.xyz/movies',
+      defaultValue: 'https://home.alecostantini.dev/movies',
     );
     // If it's just the domain (no protocol), add https://
     if (!apiUrl.startsWith('http://') && !apiUrl.startsWith('https://')) {
