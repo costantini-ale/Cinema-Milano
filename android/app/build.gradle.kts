@@ -10,14 +10,9 @@ android {
     ndkVersion = flutter.ndkVersion
 
     compileOptions {
-        // You successfully added this flag:
-isCoreLibraryDesugaringEnabled = true // ✅ Correct Name
-        sourceCompatibility = JavaVersion.VERSION_11
-        targetCompatibility = JavaVersion.VERSION_11
-    }
-
-    kotlinOptions {
-        jvmTarget = JavaVersion.VERSION_11.toString()
+        isCoreLibraryDesugaringEnabled = true
+        sourceCompatibility = JavaVersion.VERSION_17
+        targetCompatibility = JavaVersion.VERSION_17
     }
 
     defaultConfig {
@@ -31,7 +26,14 @@ isCoreLibraryDesugaringEnabled = true // ✅ Correct Name
     buildTypes {
         release {
             signingConfig = signingConfigs.getByName("debug")
+            proguardFiles(getDefaultProguardFile("proguard-android-optimize.txt"), "proguard-rules.pro")
         }
+    }
+}
+
+kotlin {
+    compilerOptions {
+        jvmTarget.set(org.jetbrains.kotlin.gradle.dsl.JvmTarget.JVM_17)
     }
 }
 
@@ -39,7 +41,6 @@ flutter {
     source = "../.."
 }
 
-// --- ADD THIS BLOCK ---
 dependencies {
-add("coreLibraryDesugaring", "com.android.tools:desugar_jdk_libs:2.1.5")
+    add("coreLibraryDesugaring", "com.android.tools:desugar_jdk_libs:2.1.5")
 }
