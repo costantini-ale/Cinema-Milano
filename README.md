@@ -16,7 +16,8 @@ A **Flutter** mobile application that displays movie listings and showtimes scra
 
 ## 🚀 Getting Started
 ### Prerequisites
-- **Flutter SDK** (≥3.19)
+- **Flutter SDK** (≥3.41)
+- **JDK 17 or newer** for the Android build (set it with `flutter config --jdk-dir <path>` if your default JDK is older).
 - **Android Studio** or another IDE with Flutter support.
 - The **backend** must be running (see the backend README for details).
 
