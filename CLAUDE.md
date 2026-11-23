@@ -69,6 +69,8 @@ Four themes defined in `main.dart`: System Default, Light, Dark, and **Neon** (p
 
 ### Android notes
 
-- `minSdkVersion 21`, core library desugaring enabled (needed for `java.time` APIs used by date formatting)
+- Gradle 9 / AGP 9 need **JDK 17 or newer**. If your default JDK is older, run `flutter config --jdk-dir <path-to-jdk-17>`.
+- `proguard-rules.pro` is picked up automatically by the Flutter Gradle plugin for release builds; don't list it in `build.gradle.kts`.
+- `minSdkVersion 24` (Flutter's minimum since it dropped API 21–23), core library desugaring enabled (needed for `java.time` APIs used by date formatting)
 - Permissions: `INTERNET`, `RECEIVE_BOOT_COMPLETED`, `SCHEDULE_EXACT_ALARM`
 - Calendar integration via `add_2_calendar`; long-press a showtime chip to add it to the device calendar
