@@ -2,7 +2,7 @@
 
 ## Changes Made
 
-Updated the Flutter app to use HTTPS with the production domain `homescrapy.xyz`.
+Updated the Flutter app to use HTTPS with the production domain `home.alecostantini.dev`.
 
 ### File Modified
 
@@ -25,7 +25,7 @@ class ApiService {
 ```dart
 class ApiService {
   // Production domain with HTTPS
-  static const String _productionDomain = 'homescrapy.xyz';
+  static const String _productionDomain = 'home.alecostantini.dev';
   
   // For local development, uncomment one of these:
   // static const String _localHost = '10.0.2.2:8000'; // Android Emulator
@@ -44,7 +44,7 @@ class ApiService {
 ## Benefits
 
 1. ✅ **Secure Communication** - All API requests now use HTTPS encryption
-2. ✅ **Domain-based** - Uses `homescrapy.xyz` instead of IP address
+2. ✅ **Domain-based** - Uses `home.alecostantini.dev` instead of IP address
 3. ✅ **Easy Switching** - Simple comments to switch between production and development
 4. ✅ **No Port Needed** - HTTPS uses standard port 443 (implicit)
 
@@ -64,8 +64,8 @@ flutter run
 ```
 
 The app will now connect to:
-- **Production API**: `https://homescrapy.xyz/movies`
-- **Swagger Docs**: `https://homescrapy.xyz/docs`
+- **Production API**: `https://home.alecostantini.dev/movies`
+- **Swagger Docs**: `https://home.alecostantini.dev/docs`
 
 ## Local Development
 
@@ -111,7 +111,7 @@ If you see SSL certificate errors, ensure:
 ### Connection Refused
 
 If connection fails:
-1. Check backend is running: `https://homescrapy.xyz/`
+1. Check backend is running: `https://home.alecostantini.dev/`
 2. Verify firewall allows HTTPS (port 443)
 3. Check app has internet permission (should already be configured)
 
@@ -120,7 +120,7 @@ If connection fails:
 Test the API endpoint:
 ```bash
 # Test from command line
-curl https://homescrapy.xyz/movies
+curl https://home.alecostantini.dev/movies
 
 # Should return JSON with movie data
 ```
@@ -134,6 +134,6 @@ curl https://homescrapy.xyz/movies
 
 ---
 
-**Status**: ✅ App updated to use HTTPS with homescrapy.xyz
+**Status**: ✅ App updated to use HTTPS with home.alecostantini.dev
 **Security**: ✅ All traffic now encrypted
 **Ready for**: Production deployment
